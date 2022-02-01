@@ -1,4 +1,6 @@
 import { useState } from "react"
+import ButtonCancel from "../components/Button/ButtonCancel"
+import ButtonConfirm from "../components/Button/ButtonConfirm"
 import Input from "../components/Input"
 
 const Nobreak = props => {
@@ -69,6 +71,11 @@ const Nobreak = props => {
                 value={finalVoltage}
                 onChange={setFinalVoltage}
             />
+            
+            <div className="Sizing">
+                <ButtonConfirm>Calcular</ButtonConfirm>
+                <ButtonCancel>Cancelar</ButtonCancel>
+            </div>
         </div>
     )
 }
