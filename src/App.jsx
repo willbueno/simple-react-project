@@ -1,9 +1,10 @@
 import './App.css'
+import Nobreak from './pages/Nobreak'
 
 function App() {
     return (
         <div className="App">
-            <h1>My App</h1>
+            <Nobreak />
         </div>
     )
 }

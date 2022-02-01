@@ -1,0 +1,19 @@
+.Input {
+    justify-content: flex-start;
+    text-align: left;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.Input label {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Input input {
+    border: 1px;
+    border-color: red;
+    border-radius: 4px;
+}
