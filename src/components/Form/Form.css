@@ -1,0 +1,16 @@
+.Form {
+    margin-left: 275px;
+    margin-right: 275px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Sizing {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+  }

@@ -1,7 +1,6 @@
 .Input {
     justify-content: flex-start;
     text-align: left;
-    align-items: left;
     display: flex;
     flex-direction: column;
     width: 200px;
