@@ -1,6 +1,5 @@
 .Form {
-    margin-left: 275px;
-    margin-right: 275px;
+    margin-right: 250px;
 
     display: flex;
     flex-direction: column;
