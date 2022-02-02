@@ -1,12 +1,17 @@
 import './App.css'
 import React from 'react'
-import Nobreak from './pages/Nobreak'
-import SimpleNobreak from './pages/SimpleNobreak'
+import { BrowserRouter as Router } from 'react-router-dom'
+
+import Navbar from './components/layout/Navbar'
+import Content from './components/layout/Content';
 
 function App() {
   return (
     <div className="App">
-      <SimpleNobreak />
+      <Router>
+        <Navbar />
+        <Content />
+      </Router>
     </div>
   )
 }
