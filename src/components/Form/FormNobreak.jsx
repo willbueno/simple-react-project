@@ -1,9 +1,11 @@
 import './Form.css'
 import { React, useState } from "react"
 
-import Input from "../Input"
+import Input from "../input/Input"
 import ButtonConfirm from "../Button/ButtonConfirm"
 import ButtonCancel from '../Button/ButtonCancel'
+
+import api from '../../api/api'
 
 const FormNobreak = props => {
     const [autonomy, setAutonomy] = useState()
@@ -11,8 +13,16 @@ const FormNobreak = props => {
     const [voltage, setVoltage] = useState()
     const [finalVoltage, setFinalVoltage] = useState()
     const [inverterEfficiency, setInverterEfficiency] = useState()
-    // const [eolFactor, setEolFactor] = useState(false)
     const [designFactor, setDesignFactor] = useState()
+
+    const confirm = function () {
+        api.get('/users/romulo27')
+            .then(res => console.log(res.data))
+    }
+
+    const cancel = function () {
+        console.log('cancel')
+    }
 
     return (
         <div className='Form'>
@@ -59,13 +69,6 @@ const FormNobreak = props => {
                 onChange={setDesignFactor}
             />
 
-            {/* <Input
-                text='Fator de fim de vida'
-                type='number'
-                value={}
-                onChange={}
-            /> */}
-
             <Input
                 text='Fator de temperatura'
                 type='number'
@@ -74,8 +77,8 @@ const FormNobreak = props => {
             />
 
             <div className="Sizing">
-                <ButtonConfirm>Calcular</ButtonConfirm>
-                <ButtonCancel>Cancelar</ButtonCancel>
+                <ButtonConfirm onClick={confirm}>Calcular</ButtonConfirm>
+                <ButtonCancel onClick={cancel}>Cancelar</ButtonCancel>
             </div>
         </div>
     )
