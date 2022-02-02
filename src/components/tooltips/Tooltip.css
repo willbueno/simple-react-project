@@ -1,0 +1,10 @@
+.Tooltip {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+.Info {
+    color: black;
+    font-size: 12px;
+}

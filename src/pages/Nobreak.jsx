@@ -1,10 +1,10 @@
 import React from "react"
-import FormNobreak from "../components/Form/FormNobreak"
+
+import FormNobreak from "../components/form/FormNobreak"
 
 const Nobreak = props => {
-
     return (
-        <FormNobreak></FormNobreak>
+        <FormNobreak />
     )
 }
 

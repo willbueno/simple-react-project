@@ -1,21 +1,19 @@
 import './Form.css'
-import { React, useState } from "react"
+import React, { useState } from "react"
 
 import Input from "../input/Input"
-import ButtonConfirm from "../Button/ButtonConfirm"
-import ButtonCancel from '../Button/ButtonCancel'
-
-import api from '../../api/api'
+import Button from "../button/Button"
 
 const FormNobreak = props => {
-    const [autonomy, setAutonomy] = useState()
-    const [power, setPower] = useState()
-    const [voltage, setVoltage] = useState()
-    const [finalVoltage, setFinalVoltage] = useState()
-    const [inverterEfficiency, setInverterEfficiency] = useState()
-    const [designFactor, setDesignFactor] = useState()
+    const [autonomy, setAutonomy] = useState('')
+    const [power, setPower] = useState('')
+    const [voltage, setVoltage] = useState('')
+    const [finalVoltage, setFinalVoltage] = useState('')
+    const [inverterEfficiency, setInverterEfficiency] = useState('')
+    const [designFactor, setDesignFactor] = useState('')
 
     const confirm = function () {
+        console.log('confirm')
         api.get('/users/romulo27')
             .then(res => console.log(res.data))
     }
@@ -28,57 +26,50 @@ const FormNobreak = props => {
         <div className='Form'>
 
             <Input
-                text='Autonomia'
-                type='number'
+                text='1. Autonomia (minutos)'
                 value={autonomy}
                 onChange={setAutonomy}
+                tooltip='TODO'
             />
 
             <Input
-                text='Potencia'
-                type='number'
+                text='2. Potência (W)'
                 value={power}
                 onChange={setPower}
+                tooltip='TODO'
             />
 
             <Input
-                text='Tensao do sistema'
-                type='number'
+                text='3. Tensão do sistema (V)'
                 value={voltage}
                 onChange={setVoltage}
+                tooltip='TODO'
             />
 
             <Input
-                text='Tensao final'
-                type='number'
+                text='4. Tensão final (V)'
                 value={finalVoltage}
                 onChange={setFinalVoltage}
+                tooltip='TODO'
             />
 
             <Input
-                text='Eficiencia do inversor'
-                type='number'
+                text='5. Eficiência do inversor (%)'
                 value={inverterEfficiency}
                 onChange={setInverterEfficiency}
+                tooltip='TODO'
             />
 
             <Input
-                text='Fator de projeto'
-                type='number'
+                text='6. Fator de projeto (%)'
                 value={designFactor}
                 onChange={setDesignFactor}
-            />
-
-            <Input
-                text='Fator de temperatura'
-                type='number'
-                value={finalVoltage}
-                onChange={setFinalVoltage}
+                tooltip='TODO'
             />
 
             <div className="Sizing">
-                <ButtonConfirm onClick={confirm}>Calcular</ButtonConfirm>
-                <ButtonCancel onClick={cancel}>Cancelar</ButtonCancel>
+                <Button name='Cancelar' type='Cancel' onClick={cancel} />
+                <Button name='Calcular' type='Confirm' onClick={confirm} />
             </div>
         </div>
     )

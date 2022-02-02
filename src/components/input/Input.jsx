@@ -1,18 +1,21 @@
 import './Input.css'
 import React from "react"
 
+import Tooltip from '../tooltips/Tooltip'
+
 const Input = props => {
     return (
         <div className="Input">
 
             <label>{props.text}</label>
 
+            <Tooltip tooltip={props.tooltip} />
+
             <input
-                type={props.type ?? 'text'}
+                type='number'
                 value={props.value}
-                onChange={e => props.onChange?.(e.target.value)}
+                onChange={e => props.onChange(+e.target.value)}
             />
-            
         </div>
     )
 }
