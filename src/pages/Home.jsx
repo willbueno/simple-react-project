@@ -8,7 +8,7 @@ import { BsBatteryHalf } from 'react-icons/bs'
 
 import { IconContext } from 'react-icons'
 
-const Home = props => {
+const Home = () => {
     return (
         <div className="Home">
             <IconContext.Provider value={{ color: '#ff0000' }}>
