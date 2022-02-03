@@ -36,13 +36,32 @@ export const SidebarData = [
     ],
   },
   {
-    title: 'Nobreak',
-    path: '/nobreak',
+    title: 'Historico',
+    path: '/',
     icon: <AiFillThunderbolt />,
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpSFill />,
+    subNav: [
+      {
+        title: 'Nobreak',
+        path: '/nobreak/history',
+        icon: <AiFillThunderbolt />,
+      },
+      {
+        title: 'Nobreak simples',
+        path: '/simple/history',
+        icon: <AiFillThunderbolt />,
+      },
+      {
+        title: 'Acessos',
+        path: '/access',
+        icon: <AiFillThunderbolt />,
+      },
+    ],
   },
   {
-    title: 'Nobreak Simples',
-    path: '/simple',
+    title: 'Sobre',
+    path: '/about',
     icon: <BsBatteryHalf />,
   }
 ]

@@ -1,6 +1,7 @@
+import './NotFound.css'
 import React from 'react'
 
-const NotFound = props => (
+const NotFound = () => (
     <div className='NotFound'>
         <h1>404</h1>
         <h2>Opsss... an error occurred!</h2>
